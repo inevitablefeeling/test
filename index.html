@@ -971,6 +971,62 @@ main,.view{width:100%;min-width:0}
 @media(prefers-reduced-motion:reduce){#asciiBackdrop pre{animation-duration:60s!important}}
 </style>
 
+<style id="batch-0-fixes-v2">
+/* ── 1. compact nav island on phones ── */
+@media(max-width:767.98px){
+  .nav{top:calc(.4rem + env(safe-area-inset-top,0px))!important}
+  .nav-inner{width:max-content!important;max-width:100%!important;gap:.25rem!important;padding:.25rem!important}
+  .nav-right{width:auto!important;justify-content:center!important;gap:.125rem!important}
+  .nav-inner .icon-btn{width:2.25rem!important;height:2.25rem!important}
+  .mobile-menu{width:min(18rem,100%)!important}
+}
+
+/* ── 2. About / Gengo start under the nav instead of floating mid-screen ── */
+.terminal-page,.gengo-page{min-height:0!important;justify-content:flex-start!important;padding:7rem 1.25rem 4rem!important}
+@media(max-width:767.98px){
+  .terminal-page,.gengo-page{padding:5.75rem 1rem calc(3rem + env(safe-area-inset-bottom,0px))!important}
+  .gengo-page .hall-header{margin-bottom:1.75rem!important}
+}
+
+/* ── 3. ASCII backdrop: slow, seamless, GPU-only scroll (no rotate/scale = no shimmer) ── */
+html body #asciiBackdrop pre{
+  transform:translate3d(0,0,0);
+  animation:asciiFlow var(--flow-dur,12s) linear infinite!important;
+  will-change:transform;backface-visibility:hidden;
+}
+@keyframes asciiFlow{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,calc(var(--tile-h,50px) * -1),0)}}
+@media(prefers-reduced-motion:reduce){html body #asciiBackdrop pre{animation:none!important}}
+
+/* ── 4. Gengo server previews ── */
+.gengo-card summary{gap:.9rem}
+.gg-head{display:flex;align-items:center;gap:.85rem;min-width:0;flex:1}
+.gg-icon{width:40px;height:40px;flex:none;border-radius:13px;overflow:hidden;background:rgba(255,255,255,.08);display:grid;place-items:center;font:600 13px ui-monospace,monospace;color:#bbb;letter-spacing:0}
+.gg-icon img{width:100%;height:100%;object-fit:cover;display:block}
+.gg-title{display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.gg-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gg-live{font:9.5px ui-monospace,monospace;letter-spacing:.12em;color:#8d8d93;text-transform:uppercase;white-space:nowrap}
+.gg-live i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#23a55a;margin-right:.45rem;vertical-align:1px}
+.gg-live i.off{background:#6b6b72}
+.gg-preview{margin-top:1rem;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.gg-banner{height:112px;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.02)) center/cover no-repeat}
+.gg-body{padding:0 1rem 1rem}
+.gg-bigicon{width:60px;height:60px;border-radius:18px;margin-top:-30px;border:3px solid #0b0b0d;background:#17171a center/cover;overflow:hidden;position:relative;display:grid;place-items:center;font:600 18px ui-monospace,monospace;color:#bbb}
+.gg-bigicon img{width:100%;height:100%;object-fit:cover}
+.gg-pname{font:600 15px/1.3 -apple-system,"SF Pro Display",Segoe UI,Roboto,sans-serif;color:#fff;margin:.7rem 0 .25rem;letter-spacing:0;text-transform:none}
+.gg-desc{font:13px/1.5 -apple-system,"SF Pro Display",Segoe UI,Roboto,sans-serif;color:#a9a9b0;margin:0 0 .8rem;letter-spacing:0;text-transform:none}
+.gg-stats{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font:10px ui-monospace,monospace;letter-spacing:.12em;color:#9a9aa1;text-transform:uppercase}
+.gg-stats i{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:.45rem;vertical-align:1px;background:#6b6b72}
+.gg-stats i.on{background:#23a55a}
+.gg-faces{display:flex;margin-top:.85rem;padding-left:6px}
+.gg-faces img{width:26px;height:26px;border-radius:50%;border:2px solid #0b0b0d;margin-left:-6px;object-fit:cover;background:#222}
+.gg-skel{height:210px;animation:ggPulse 1.4s ease-in-out infinite;background:rgba(255,255,255,.05)}
+@keyframes ggPulse{50%{opacity:.45}}
+.gg-err{padding:1rem;font:11px/1.6 ui-monospace,monospace;color:#8a8a90;letter-spacing:.06em}
+.gengo-detail a.gg-join{display:inline-flex;margin-top:1rem;padding:.7rem 1.1rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.06);font:600 10.5px ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase}
+.gengo-detail a.gg-join:hover{background:rgba(255,255,255,.14);text-decoration:none}
+html.light .gg-pname{color:#0a0a0a}
+</style>
+
 </head>
 
 <body class="intro-active">
@@ -1156,10 +1212,19 @@ main,.view{width:100%;min-width:0}
   <section class="view" id="view-gengo" aria-label="Gengo">
     <div class="gengo-page">
       <header class="hall-header"><h1 class="hall-title">GENGO</h1><div class="hall-divider"></div><p class="hall-subtitle">OUR CONNECTIONS</p></header>
-      <div class="gengo-list">
-        <details class="gengo-card"><summary><span>REBELLION GATE</span><span class="gengo-plus">+</span></summary><div class="gengo-detail"><p>Discord invite</p><a href="https://discord.gg/rebelliongate" target="_blank" rel="noopener noreferrer">discord.gg/rebelliongate ↗</a></div></details>
-        <details class="gengo-card"><summary><span>LOSTBOYS</span><span class="gengo-plus">+</span></summary><div class="gengo-detail"><p>Discord invite</p><a href="https://discord.gg/lostboysz" target="_blank" rel="noopener noreferrer">discord.gg/lostboysz ↗</a></div></details>
-        <details class="gengo-card"><summary><span>GENGO 03</span><span class="gengo-plus">+</span></summary><div class="gengo-detail"><p>Discord invite</p><a href="https://discord.gg/C3ceSeQ4mT" target="_blank" rel="noopener noreferrer">discord.gg/C3ceSeQ4mT ↗</a></div></details>
+      <div class="gengo-list" id="gengoList">
+        <details class="gengo-card" open data-gid="1453733588301381745" data-code="rebelliongate">
+          <summary><span class="gg-head"><span class="gg-icon" data-gg="icon">R</span><span class="gg-title"><span class="gg-name" data-gg="name">REBELLION GATE</span><span class="gg-live" data-gg="live">loading…</span></span></span><span class="gengo-plus">+</span></summary>
+          <div class="gengo-detail"><div class="gg-preview" data-gg="preview"><div class="gg-skel"></div></div><a class="gg-join" href="https://discord.gg/rebelliongate" target="_blank" rel="noopener noreferrer">Join server ↗</a></div>
+        </details>
+        <details class="gengo-card" data-gid="1565719165350711410" data-code="lostboysz">
+          <summary><span class="gg-head"><span class="gg-icon" data-gg="icon">L</span><span class="gg-title"><span class="gg-name" data-gg="name">LOSTBOYS</span><span class="gg-live" data-gg="live">loading…</span></span></span><span class="gengo-plus">+</span></summary>
+          <div class="gengo-detail"><div class="gg-preview" data-gg="preview"><div class="gg-skel"></div></div><a class="gg-join" href="https://discord.gg/lostboysz" target="_blank" rel="noopener noreferrer">Join server ↗</a></div>
+        </details>
+        <details class="gengo-card" data-gid="1566028975250088106" data-code="C3ceSeQ4mT">
+          <summary><span class="gg-head"><span class="gg-icon" data-gg="icon">H</span><span class="gg-title"><span class="gg-name" data-gg="name">HOPELESS GROUNDS</span><span class="gg-live" data-gg="live">loading…</span></span></span><span class="gengo-plus">+</span></summary>
+          <div class="gengo-detail"><div class="gg-preview" data-gg="preview"><div class="gg-skel"></div></div><a class="gg-join" href="https://discord.gg/C3ceSeQ4mT" target="_blank" rel="noopener noreferrer">Join server ↗</a></div>
+        </details>
       </div>
     </div>
   </section>
@@ -2642,6 +2707,119 @@ html.banner-bg .intro-overlay.is-bg canvas{opacity:.1!important}
 </script>
 
 <script id="batch-0-route-fallback">(function(){document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-route]');if(!a)return;var target=a.getAttribute('data-route');if(!target)return;if(location.hash!=='#'+target)location.hash=target;var menu=document.getElementById('mobileMenu');var btn=document.getElementById('menuBtn');if(menu)menu.classList.remove('open');if(btn)btn.setAttribute('aria-expanded','false');},true);})();</script>
+
+<script id="batch-0-fixes-v2-js">
+/* ───────── ASCII backdrop: rebuild as N identical tiles and scroll exactly one tile per loop ───────── */
+(function () {
+  var SPEED = 10;            /* px per second — lower = slower */
+  var TILE_LINES = 8;        /* the art block is 8 lines tall */
+  var bd = document.getElementById('asciiBackdrop'), pre = bd && bd.querySelector('pre');
+  if (!pre) return;
+  var tile = pre.textContent.replace(/\s+$/, '').split('\n').slice(0, TILE_LINES).join('\n') + '\n';
+  function build() {
+    pre.textContent = tile;
+    var lh = parseFloat(getComputedStyle(pre).lineHeight);
+    var tileH = isFinite(lh) ? lh * TILE_LINES : pre.offsetHeight;   /* exact px, so the loop has no seam */
+    if (!tileH) return;
+    var n = Math.ceil((window.innerHeight * 1.6) / tileH) + 2;
+    pre.textContent = new Array(n + 1).join(tile);
+    pre.style.setProperty('--tile-h', tileH + 'px');
+    pre.style.setProperty('--flow-dur', (tileH / SPEED).toFixed(3) + 's');
+  }
+  build();
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(build, 200); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+})();
+
+/* ───────── Gengo: live server previews (Discord invite + widget APIs) ───────── */
+(function () {
+  var list = document.getElementById('gengoList'); if (!list) return;
+  var CDN = 'https://cdn.discordapp.com/';
+  var loaded = false, timer = 0;
+
+  function jget(u) {
+    return fetch(u, { headers: { Accept: 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .catch(function () { return null; });
+  }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function fmt(n) { return typeof n === 'number' ? n.toLocaleString('en-US') : null; }
+  function iconUrl(g, size) { return g && g.icon ? CDN + 'icons/' + g.id + '/' + g.icon + (g.icon.indexOf('a_') === 0 ? '.gif' : '.png') + '?size=' + size : ''; }
+  function bannerUrl(g) {
+    if (!g) return '';
+    if (g.banner) return CDN + 'banners/' + g.id + '/' + g.banner + '.png?size=640';
+    if (g.splash) return CDN + 'splashes/' + g.id + '/' + g.splash + '.png?size=640';
+    return '';
+  }
+  function setImg(box, url, fallbackText) {
+    box.textContent = '';
+    if (!url) { box.textContent = fallbackText; return; }
+    var im = new Image(); im.alt = ''; im.decoding = 'async'; im.src = url;
+    im.onerror = function () { box.textContent = fallbackText; };
+    box.appendChild(im);
+  }
+
+  function render(card, invite, widget) {
+    var id = card.getAttribute('data-gid');
+    var g = invite && invite.guild && invite.guild.id === id ? invite.guild : null;
+    var name = (g && g.name) || (widget && widget.name) || card.querySelector('[data-gg=name]').textContent;
+    var online = widget && typeof widget.presence_count === 'number' ? widget.presence_count
+               : invite && typeof invite.approximate_presence_count === 'number' && g ? invite.approximate_presence_count : null;
+    var members = invite && g && typeof invite.approximate_member_count === 'number' ? invite.approximate_member_count : null;
+    var initial = (name || '?').charAt(0).toUpperCase();
+
+    /* collapsed row */
+    card.querySelector('[data-gg=name]').textContent = String(name).toUpperCase();
+    setImg(card.querySelector('[data-gg=icon]'), iconUrl(g, 96), initial);
+    var live = card.querySelector('[data-gg=live]'); live.textContent = '';
+    if (online != null || members != null) {
+      live.appendChild(el('i', online ? '' : 'off'));
+      live.appendChild(document.createTextNode(online != null ? fmt(online) + ' online' : fmt(members) + ' members'));
+    } else live.textContent = 'discord server';
+
+    /* expanded preview */
+    var box = card.querySelector('[data-gg=preview]'); box.textContent = '';
+    if (!g && !widget) { box.appendChild(el('div', 'gg-err', 'Preview unavailable right now — use the invite below.')); return; }
+    var ban = el('div', 'gg-banner'); var bu = bannerUrl(g);
+    if (bu) ban.style.backgroundImage = 'url("' + bu + '")';
+    box.appendChild(ban);
+    var body = el('div', 'gg-body');
+    var big = el('div', 'gg-bigicon'); setImg(big, iconUrl(g, 128), initial); body.appendChild(big);
+    body.appendChild(el('div', 'gg-pname', name));
+    if (g && g.description) body.appendChild(el('p', 'gg-desc', g.description));
+    var stats = el('div', 'gg-stats');
+    if (online != null) { var s1 = el('span'); s1.appendChild(el('i', 'on')); s1.appendChild(document.createTextNode(fmt(online) + ' online')); stats.appendChild(s1); }
+    if (members != null) { var s2 = el('span'); s2.appendChild(el('i')); s2.appendChild(document.createTextNode(fmt(members) + ' members')); stats.appendChild(s2); }
+    if (stats.childNodes.length) body.appendChild(stats);
+    if (widget && widget.members && widget.members.length) {
+      var faces = el('div', 'gg-faces');
+      widget.members.slice(0, 8).forEach(function (m) { var im = new Image(); im.alt = ''; im.loading = 'lazy'; im.src = m.avatar_url; faces.appendChild(im); });
+      body.appendChild(faces);
+    }
+    box.appendChild(body);
+  }
+
+  function loadAll() {
+    list.querySelectorAll('.gengo-card').forEach(function (card) {
+      var id = card.getAttribute('data-gid'), code = card.getAttribute('data-code');
+      Promise.all([
+        jget('https://discord.com/api/v10/invites/' + encodeURIComponent(code) + '?with_counts=true'),
+        jget('https://discord.com/api/guilds/' + id + '/widget.json')
+      ]).then(function (res) { render(card, res[0], res[1]); });
+    });
+  }
+  function onRoute() {
+    var on = (location.hash.replace(/^#/, '') === '/gengo');
+    if (on && !loaded) { loaded = true; loadAll(); }
+    clearInterval(timer);
+    if (on) timer = setInterval(function () { if (!document.hidden) loadAll(); }, 60000);
+  }
+  window.addEventListener('hashchange', onRoute);
+  onRoute();
+  /* warm the cache shortly after load so the page is already filled when you open it */
+  setTimeout(function () { if (!loaded) { loaded = true; loadAll(); } }, 2500);
+})();
+</script>
 
 </body>
 </html>
