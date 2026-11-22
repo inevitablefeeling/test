@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spyware.org</title>
+<meta name="description" content=": sitting pretty sa akong secret lab habang nagaaway sila ng boyfie niyang insecure">
+<meta name="author" content="spyware*">
+<meta name="keywords" content=",spyware,spyware,spyware.xyz">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="spyware">
+<meta property="og:description" content=": sitting pretty sa akong secret lab habang nagaaway sila ng boyfie niyang insecure">
+<meta property="og:url" content="https://spyware.xyz">
+<meta property="og:site_name" content="spyware*">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="spyware">
+<meta name="twitter:description" content=": sitting pretty sa akong secret lab habang nagaaway sila ng boyfie niyang insecure">
+<link rel="shortcut icon" href="https://file.garden/ape4wXkcZmuN3zhu/Jeweled%20Spyware%20Calligraphy%20Emblem.png">
+<link rel="icon" href="https://file.garden/ape4wXkcZmuN3zhu/Jeweled%20Spyware%20Calligraphy%20Emblem.png">
+<link rel="apple-touch-icon" href="https://file.garden/ape4wXkcZmuN3zhu/Jeweled%20Spyware%20Calligraphy%20Emblem.png">
+
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('theme') || 'dark';
+    var r = document.documentElement;
+    r.classList.toggle('light', t === 'light');
+    r.classList.toggle('dark', t !== 'light');
+    r.style.colorScheme = t === 'light' ? 'light' : 'dark';
+  } catch (e) {}
+})();
+</script>
+
+<style>
+:root{
+  --bg:#050505;--fg:#fafafa;--muted:rgba(255,255,255,.4);
+  --border:rgba(255,255,255,.08);--border-hover:rgba(255,255,255,.16);
+  --panel:rgba(255,255,255,.04);--panel-hover:rgba(255,255,255,.06);
+  --soft:rgba(255,255,255,.04);--hover:rgba(255,255,255,.06);
+  --active:rgba(255,255,255,.08);
+  --nav-bg:rgba(0,0,0,.8);
+  --card-bg:#111;--card-border:rgba(255,255,255,.10);
+  --card-bg-soft:rgba(255,255,255,.06);
+  --thumb-bg:rgba(0,0,0,.25);--inner:rgba(255,255,255,.02);
+  --skeleton:rgba(255,255,255,.06);
+  --bracket:rgba(255,255,255,.3);--plus:rgba(255,255,255,.7);
+  --online:#23a55a;--idle:#f0b232;--dnd:#f23f43;--offline:#80848e;
+  --spotify:#1db954;
+}
+html.light{
+  --bg:#fff;--fg:#0a0a0a;--muted:rgba(0,0,0,.45);
+  --border:rgba(0,0,0,.10);--border-hover:rgba(0,0,0,.18);
+  --panel:rgba(0,0,0,.02);--panel-hover:rgba(0,0,0,.04);
+  --soft:rgba(0,0,0,.03);--hover:rgba(0,0,0,.05);
+  --active:rgba(0,0,0,.07);
+  --nav-bg:rgba(255,255,255,.85);
+  --card-bg:#fff;--card-border:rgba(0,0,0,.10);
+  --card-bg-soft:rgba(0,0,0,.03);
+  --thumb-bg:rgba(0,0,0,.04);--inner:rgba(0,0,0,.015);
+  --skeleton:rgba(0,0,0,.06);
+  --bracket:rgba(0,0,0,.3);--plus:rgba(0,0,0,.6);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background-color:var(--bg);color:var(--fg);
+  font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-weight:300;min-height:100%;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  transition:background-color .3s ease,color .3s ease;
+  overflow-x:hidden;
+  
+
+  background-image: 
+    linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.8) 40%, var(--bg) 100%),
+    url('https://file.garden/ape4wXkcZmuN3zhu/Jeweled%20Spyware%20Calligraphy%20Emblem.png');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+html.light body {
+  background-image: none;
+}
+
+body.intro-active { overflow: hidden; }
+
+img,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:200;padding:.5rem 1rem;border-radius:.5rem;background:var(--fg);color:var(--bg);font-size:.875rem;text-decoration:none}
+.skip-link:focus{left:1rem;top:1rem;outline:2px solid var(--fg);outline-offset:2px}
+:where(a,button,[tabindex]):focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+
+.intro-overlay,
+.intro-overlay *,
+.intro-overlay *::before,
+.intro-overlay *::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+.intro-overlay{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:grid;
+  place-items:center;
+  background:#000;
+  opacity:1;
+  pointer-events:auto;
+  cursor:pointer;
+  outline:none;
+  transition:opacity .38s cubic-bezier(.16,1,.3,1);
+}
+.intro-overlay.intro-fade-out{opacity:0;pointer-events:none}
+.intro-overlay[hidden]{display:none}
+
+.intro-content{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:100vw;
+  height:100vh;
+}
+.intro-overlay video{
+  grid-area:1 / 1;
+  width:85vw;
+  max-width:580px;
+  max-height:75vh;
+  object-fit:contain;
+  pointer-events:none;
+  user-select:none;
+  -webkit-user-select:none;
+}
+.intro-skip-hint{
+  position:fixed;
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.75rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  pointer-events:none;
+  animation:introPulse 2s ease-in-out infinite;
+}
+@keyframes introPulse{
+  0%,100%{opacity:.3}
+  50%{opacity:.8}
+}
+
+.nav{
+  position:fixed;left:0;right:0;top:1rem;z-index:50;
+  padding:0 1rem;
+  animation:dropIn .6s cubic-bezier(.16,1,.3,1) both;
+}
+@media (min-width:640px){.nav{padding:0 1.5rem}}
+@media (min-width:1024px){.nav{padding:0 2rem}}
+
+.nav-inner{
+  max-width:72rem;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.375rem;
+  border:1px solid var(--border);border-radius:10px;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+.nav-right{display:flex;align-items:center;gap:.25rem}
+
+.brand{
+  display:flex;align-items:center;justify-content:center;
+  padding:.5rem .75rem;border-radius:6px;
+  font-size:1.25rem;line-height:1;letter-spacing:.02em;
+  text-decoration:none;
+  transition:background-color .4s cubic-bezier(.32,.72,0,1);
+}
+.brand:hover{background:var(--hover)}
+
+.nav-links{display:none;align-items:center;gap:.125rem}
+@media (min-width:768px){.nav-links{display:flex}}
+
+.nav-link{
+  display:flex;align-items:center;justify-content:center;
+  padding:.625rem .875rem;border-radius:6px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;text-transform:uppercase;letter-spacing:.18em;
+  color:var(--muted);text-decoration:none;
+  transition:background-color .4s cubic-bezier(.32,.72,0,1),color .4s cubic-bezier(.32,.72,0,1);
+}
+.nav-link:hover{background:var(--soft);color:var(--fg)}
+.nav-link[aria-current="page"]{background:var(--active);color:var(--fg)}
+
+.divider{display:none;width:1px;height:1.25rem;margin:0 .25rem;background:var(--border)}
+@media (min-width:768px){.divider{display:block}}
+
+.icon-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:2.25rem;height:2.25rem;padding:0;
+  border-radius:6px;color:var(--muted);
+  transition:background-color .4s cubic-bezier(.32,.72,0,1),color .4s cubic-bezier(.32,.72,0,1);
+}
+.icon-btn:hover{background:var(--hover);color:var(--fg)}
+.icon-btn svg{width:1rem;height:1rem}
+
+#musicBtn[aria-pressed="true"]{color:var(--fg);background:var(--active)}
+#musicBtn[aria-pressed="true"] svg{animation:musicPulse 1.6s ease-in-out infinite}
+
+@keyframes musicPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.12)}
+}
+
+.md-only{display:none !important}
+@media (min-width:768px){.md-only{display:flex !important}}
+.md-hide{display:flex}
+@media (min-width:768px){.md-hide{display:none}}
+
+.mobile-menu{
+  display:none;flex-direction:column;gap:.125rem;
+  max-width:72rem;margin:.5rem auto 0;padding:.375rem;
+  border:1px solid var(--border);border-radius:10px;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+.mobile-menu.open{display:flex}
+.mobile-menu .nav-link{justify-content:flex-start;padding:.75rem .875rem}
+@media (min-width:768px){.mobile-menu{display:none}}
+
+.view{display:none}
+.view.active{display:block}
+
+.hero{
+  position:relative;min-height:100dvh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;padding:6rem 0 3rem;
+}
+.container{width:100%;max-width:80rem;margin:0 auto;padding:0 1rem}
+@media (min-width:640px){.container{padding:0 1.5rem}}
+@media (min-width:1024px){.container{padding:0 2rem}}
+
+.hero-inner{display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center}
+@media (min-width:640px){.hero-inner{gap:2rem}}
+.hero-logo{width:auto;height:clamp(8rem,26vw,14rem);object-fit:contain}
+.hero-copy{
+  max-width:48rem;margin:0;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;line-height:1.625;color:var(--fg);
+}
+@media (min-width:640px){.hero-copy{font-size:12px}}
+@media (min-width:768px){.hero-copy{font-size:14px}}
+
+.affiliations{position:relative;padding:6rem 0;overflow:hidden}
+.section-head{display:flex;align-items:center;justify-content:center;margin:0 0 4rem}
+.section-title{display:flex;align-items:center;margin:0;font-size:1.875rem;font-weight:300;line-height:1.1}
+@media (min-width:640px){.section-title{font-size:2.25rem}}
+@media (min-width:768px){.section-title{font-size:3rem}}
+.bracket{flex:none;width:2.5rem;height:2.5rem;border:0 solid var(--bracket)}
+.bracket.left{border-left-width:1px;border-top-width:1px;border-bottom-width:1px}
+.bracket.right{border-right-width:1px;border-top-width:1px;border-bottom-width:1px}
+@media (min-width:640px){.bracket{width:3rem;height:3rem}}
+@media (min-width:768px){.bracket{width:3.5rem;height:3.5rem}}
+
+.aff-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:80rem;margin:0 auto}
+@media (min-width:640px){.aff-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.aff-grid{grid-template-columns:repeat(3,1fr)}}
+
+.aff-card{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  width:100%;max-width:24rem;height:30rem;
+  margin:0 auto;padding:1rem;
+  border:1px solid var(--card-border);
+  background:var(--card-bg-soft);
+  -webkit-backdrop-filter:blur(40px);backdrop-filter:blur(40px);
+  box-shadow:0 10px 15px -3px rgba(0,0,0,.10),0 4px 6px -4px rgba(0,0,0,.10);
+}
+.aff-card .plus{position:absolute;width:1.5rem;height:1.5rem;color:var(--plus);pointer-events:none}
+.plus.tl{top:-.75rem;left:-.75rem}.plus.bl{bottom:-.75rem;left:-.75rem}
+.plus.tr{top:-.75rem;right:-.75rem}.plus.br{bottom:-.75rem;right:-.75rem}
+.aff-face{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:1rem;text-align:center;
+  transition:opacity .25s ease,transform .25s ease;
+}
+.aff-front{opacity:1}
+.aff-back{opacity:0}
+.aff-card:hover .aff-front,
+.aff-card:focus-within .aff-front{opacity:0;transform:translateY(-1rem)}
+.aff-card:hover .aff-back,
+.aff-card:focus-within .aff-back{opacity:1;transform:translateY(-1rem)}
+.aff-icon{width:3rem;height:3rem;color:var(--fg);opacity:.3}
+@media (min-width:640px){.aff-icon{width:3.5rem;height:3.5rem}}
+@media (min-width:768px){.aff-icon{width:4rem;height:4rem}}
+.aff-back img{width:18rem;height:18rem;object-fit:contain}
+@media (min-width:640px){.aff-back img{width:20rem;height:20rem}}
+@media (min-width:768px){.aff-back img{width:14rem;height:14rem}}
+.aff-caption{margin:1rem 0 0;font-size:.875rem;font-weight:300;line-height:1.5}
+@media (min-width:640px){.aff-caption{font-size:1rem}}
+
+.hall-page {
+  min-height: 100dvh;
+  padding: 8rem 1.5rem 4rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+.hall-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.hall-title {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem;
+  color: var(--fg);
+}
+.hall-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--muted);
+  margin: 0 auto 1rem;
+}
+.hall-subtitle {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.fame-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .fame-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .fame-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.fame-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+  aspect-ratio: 16/11;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.fame-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+.fame-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.fame-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+  z-index: 1;
+}
+.fame-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+}
+.fame-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.fame-card-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: #222;
+  flex: none;
+}
+.fame-card-avatar-wrap{
+  position:relative;
+  width:2.5rem;
+  height:2.5rem;
+  flex:none;
+}
+.fame-card-avatar-wrap .fame-card-avatar{width:100%;height:100%}
+.fame-card-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.fame-card-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fame-card-handle {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+.fame-card-bio {
+  font-size: 11px;
+  color: rgba(255,255,255,0.85);
+  margin: 0.25rem 0 0.85rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fame-card-tags {
+  display: flex;
+  gap: 0.4rem;
+}
+.fame-card-tag {
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 2px;
+}
+
+.members-page{
+  min-height:100dvh;
+  padding:7rem 1rem 4rem;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem;
+  max-width:1400px;
+  margin:0 auto;
+}
+@media (min-width:1024px){
+  .members-page{
+    grid-template-columns:280px 1fr 80px;
+    align-items:center;gap:3rem;padding-top:5rem;
+  }
+}
+
+.identity-panel{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:1.25rem;
+  animation:fadeUp .8s cubic-bezier(.16,1,.3,1) both;
+}
+@media (min-width:1024px){
+  .identity-panel{align-items:flex-start;text-align:left}
+}
+.avatar-wrapper{position:relative;width:6rem;height:6rem;flex:none}
+.avatar-wrapper::before{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  border:1px dashed var(--border);animation:spin 30s linear infinite;
+}
+.avatar-wrapper::after{
+  content:"";position:absolute;inset:.35rem;border-radius:50%;
+  border:1px solid var(--border);
+}
+.avatar{
+  position:relative;z-index:1;
+  width:100%;height:100%;border-radius:50%;
+  object-fit:cover;background:var(--panel);
+  border:1px solid var(--border);
+}
+
+.avatar-deco{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  pointer-events:none;
+  user-select:none;
+  -webkit-user-select:none;
+  z-index:2;
+  display:none;
+}
+.avatar-deco.is-on{display:block}
+
+.avatar-wrapper .presence-dot{
+  position:absolute;z-index:3;
+  right:.35rem;bottom:.35rem;
+  width:1.1rem;height:1.1rem;border-radius:50%;
+  border:3px solid var(--bg);background:var(--offline);
+  transition:background-color .3s;
+}
+.avatar-wrapper .presence-dot[data-status="online"]{background:var(--online)}
+.avatar-wrapper .presence-dot[data-status="idle"]{background:var(--idle)}
+.avatar-wrapper .presence-dot[data-status="dnd"]{background:var(--dnd)}
+
+.member-name{margin:0;font-size:3.5rem;font-weight:300;line-height:1;letter-spacing:-.03em}
+@media (min-width:640px){.member-name{font-size:4.5rem}}
+.member-handle{
+  margin:.25rem 0 0;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px;letter-spacing:.1em;color:var(--muted);
+}
+.member-role{
+  margin:0;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.identity-panel .member-bio{
+  font-size:.85rem;
+  color:var(--muted);
+  margin:0;
+  max-width:20rem;
+  line-height:1.5;
+}
+.activity-chip{
+  display:inline-flex;align-items:center;gap:.5rem;
+  margin-top:.25rem;padding:.4rem .75rem;
+  border:1px solid var(--border);border-radius:999px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;letter-spacing:.08em;color:var(--muted);
+  max-width:100%;overflow:hidden;
+}
+.activity-chip.hidden{display:none}
+.activity-chip img{width:1rem;height:1rem;border-radius:3px;flex:none}
+.activity-chip .chip-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.activity-chip .chip-label{color:var(--fg);font-weight:400}
+.activity-chip.spotify{border-color:rgba(29,185,84,.35);color:var(--spotify)}
+.activity-chip.spotify .chip-label{color:var(--spotify)}
+
+.carousel-container{
+  position:relative;width:100%;height:500px;
+  perspective:1200px;transform-style:preserve-3d;
+  animation:fadeUp .8s .1s cubic-bezier(.16,1,.3,1) both;
+}
+@media (min-width:640px){.carousel-container{height:600px}}
+@media (min-width:1024px){.carousel-container{height:700px}}
+
+.carousel{position:relative;width:100%;height:100%;transform-style:preserve-3d}
+
+.carousel-card{
+  position:absolute;top:50%;left:50%;
+  width:90%;max-width:800px;
+  aspect-ratio:16/9;margin:0;
+  transform-origin:center center;
+  border-radius:16px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  overflow:hidden;
+  transition:transform .7s cubic-bezier(.25,.46,.45,.94),
+             opacity .7s cubic-bezier(.25,.46,.45,.94),
+             box-shadow .7s ease;
+  will-change:transform,opacity;
+}
+@media (min-width:640px){.carousel-card{width:80%}}
+@media (min-width:1024px){.carousel-card{width:70%}}
+
+.carousel-card img{width:100%;height:100%;object-fit:cover;display:block}
+
+.carousel-card .card-label{
+  position:absolute;top:1rem;right:1.25rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);z-index:2;
+}
+html.light .carousel-card .card-label{color:rgba(0,0,0,.5)}
+
+.carousel-card .card-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.7) 100%);
+  z-index:1;pointer-events:none;
+}
+
+.card-presence{
+  position:absolute;top:1rem;left:1.25rem;z-index:2;
+  display:flex;align-items:center;gap:.4rem;
+  padding:.25rem .55rem;border-radius:999px;
+  background:rgba(0,0,0,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#fff;
+}
+.card-presence .dot{width:.5rem;height:.5rem;border-radius:50%;background:var(--offline);flex:none}
+.card-presence[data-status="online"] .dot{background:var(--online)}
+.card-presence[data-status="idle"] .dot{background:var(--idle)}
+.card-presence[data-status="dnd"] .dot{background:var(--dnd)}
+
+.carousel-card[data-pos="0"]{transform:translate(-50%,-50%) rotateY(-12deg) rotateX(4deg) translateZ(0);opacity:1;z-index:10;box-shadow:0 25px 60px -15px rgba(0,0,0,.8)}
+.carousel-card[data-pos="1"]{transform:translate(-50%,-50%) translateY(220px) translateX(40px) rotateY(-12deg) rotateX(4deg) translateZ(-150px);opacity:.5;z-index:5;box-shadow:0 15px 40px -10px rgba(0,0,0,.6)}
+.carousel-card[data-pos="-1"]{transform:translate(-50%,-50%) translateY(-220px) translateX(40px) rotateY(-12deg) rotateX(4deg) translateZ(-150px);opacity:0;z-index:1;pointer-events:none}
+.carousel-card[data-pos="2"]{transform:translate(-50%,-50%) translateY(440px) translateX(80px) rotateY(-12deg) rotateX(4deg) translateZ(-300px);opacity:.2;z-index:2;pointer-events:none}
+.carousel-card[data-pos="-2"]{transform:translate(-50%,-50%) translateY(-440px) translateX(80px) rotateY(-12deg) rotateX(4deg) translateZ(-300px);opacity:0;z-index:0;pointer-events:none}
+
+.navigator{display:none;flex-direction:column;align-items:center;gap:1.5rem;animation:fadeUp .8s .2s cubic-bezier(.16,1,.3,1) both}
+@media (min-width:1024px){.navigator{display:flex}}
+.view-toggle{display:flex;flex-direction:column;gap:.25rem}
+.view-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:2.25rem;height:2.25rem;border-radius:6px;color:var(--muted);
+  transition:background-color .3s,color .3s;
+}
+.view-btn:hover{background:var(--hover);color:var(--fg)}
+.view-btn.is-active{background:var(--active);color:var(--fg)}
+.view-btn svg{width:16px;height:16px}
+
+.rail-wrap{position:relative;display:flex;flex-direction:column;align-items:center;max-height:60vh}
+.rail{
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  padding:.5rem 0;overflow-y:auto;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.rail::-webkit-scrollbar{display:none}
+.rail-step{
+  position:relative;width:2rem;height:1.25rem;
+  display:flex;align-items:center;justify-content:center;
+  padding:0;flex:none;
+}
+.rail-step::before{
+  content:"";display:block;width:1px;height:100%;
+  background:var(--border);transition:background-color .3s,width .3s;
+}
+.rail-step:hover::before{background:var(--muted)}
+.rail-step.is-active::before{background:var(--fg);width:2px}
+.rail-step span{
+  position:absolute;right:.4rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:8px;color:var(--muted);opacity:0;transition:opacity .3s;
+}
+.rail-step:hover span,.rail-step.is-active span{opacity:1}
+
+.grid-view{display:none;grid-template-columns:1fr;gap:1.5rem;width:100%}
+@media (min-width:640px){.grid-view{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.grid-view{grid-template-columns:repeat(3,1fr)}}
+.showcase.grid-mode .carousel-container{display:none}
+.showcase.grid-mode .grid-view{display:grid}
+
+.grid-card{
+  display:flex;flex-direction:column;align-items:center;gap:1rem;
+  padding:2rem 1.5rem;
+  border:1px solid var(--border);border-radius:16px;
+  background:var(--panel);text-align:center;position:relative;
+  transition:background-color .3s,transform .3s;
+}
+.grid-card:hover{background:var(--hover);transform:translateY(-4px)}
+.grid-card .avatar-wrapper{width:4.5rem;height:4.5rem}
+.grid-card .avatar-wrapper::before{animation:none}
+.grid-card .member-name{font-size:1.5rem}
+.grid-card .member-role{font-size:9px}
+.grid-card .member-bio{
+  font-size:.8rem;color:var(--muted);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.grid-card .grid-presence{
+  position:absolute;top:.75rem;right:.75rem;
+  display:flex;align-items:center;gap:.3rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+.grid-card .grid-presence .dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--offline)}
+.grid-card .grid-presence[data-status="online"] .dot{background:var(--online)}
+.grid-card .grid-presence[data-status="idle"] .dot{background:var(--idle)}
+.grid-card .grid-presence[data-status="dnd"] .dot{background:var(--dnd)}
+
+@keyframes dropIn{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.fade-up{animation:fadeUp .7s cubic-bezier(.16,1,.3,1) both}
+.fade-up.d1{animation-delay:.05s}
+.fade-up.d2{animation-delay:.12s}
+.fade-up.d3{animation-delay:.18s}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+}
+</style>
+</head>
+
+<body class="intro-active">
+
+<div
+  class="intro-overlay"
+  id="introOverlay"
+  role="button"
+  tabindex="0"
+  aria-label="Skip intro"
+>
+  <div class="intro-content">
+    <video
+      id="introVideo"
+      src="https://file.garden/ape4wXkcZmuN3zhu/hello_no_xorev.mp4"
+      muted
+      playsinline
+      preload="auto"
+      draggable="false"
+    ></video>
+  </div>
+  <span class="intro-skip-hint">Click to skip</span>
+</div>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="#/" data-route="/" aria-label="spyware* home">spyware*</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a class="nav-link" href="#/" data-route="/" data-nav="home">Home</a>
+        <a class="nav-link" href="#/hall-of-fame" data-route="/hall-of-fame" data-nav="hall">Hall of Fame</a>
+        <a class="nav-link" href="#/members" data-route="/members" data-nav="members">Members</a>
+      </div>
+      <span class="divider" aria-hidden="true"></span>
+      <button class="icon-btn md-only" type="button" aria-label="Sign in" title="Sign in">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path>
+        </svg>
+      </button>
+      <span class="divider" aria-hidden="true"></span>
+
+      <button class="icon-btn" type="button" id="musicBtn" aria-label="Play background music" aria-pressed="false" title="Play background music">
+        <svg id="musicIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+          <line x1="2" y1="2" x2="22" y2="22"></line>
+        </svg>
+      </button>
+
+      <button class="icon-btn" type="button" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+      </button>
+      <button class="icon-btn md-hide" type="button" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link" href="#/" data-route="/" data-nav="home">Home</a>
+    <a class="nav-link" href="#/hall-of-fame" data-route="/hall-of-fame" data-nav="hall">Hall of Fame</a>
+    <a class="nav-link" href="#/members" data-route="/members" data-nav="members">Members</a>
+    <a class="nav-link" href="#/login" data-route="/login">Sign in</a>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+  <section class="view active" id="view-home" aria-label="Home">
+    <div class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <img class="hero-logo fade-up d1" src="https://file.garden/ape4wXkcZmuN3zhu/Jeweled_Spyware_Calligraphy_Emblem-removebg-preview.png" alt="spyware*" width="400" height="200" onerror="this.style.display='none'">
+          <p class="hero-copy fade-up d2">
+            We are the shadows others fear and the truth they deny. Forged in chaos, bound by loyalty, driven by purpose. This hall honors those who stand when all others fall.
+ Not for glory. Not for fame. But for legacy. We are few. We are the remaining
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="affiliations">
+      <div class="container">
+        <div class="section-head fade-up">
+          <h2 class="section-title">
+            <span class="bracket left" aria-hidden="true"></span>
+            affiliations
+            <span class="bracket right" aria-hidden="true"></span>
+          </h2>
+        </div>
+
+        <div class="aff-grid">
+          <div class="aff-card fade-up d1" tabindex="0">
+            <svg class="plus tl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus bl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus tr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus br" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <div class="aff-face aff-front">
+              <svg class="aff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"></path><path d="m5.1 8-2.9-.8"></path><path d="m6 12-1.9 2"></path><path d="M7.2 2.2 8 5.1"></path><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path></svg>
+            </div>
+            <div class="aff-face aff-back">
+              <img src="https://file.garden/ape4wXkcZmuN3zhu/image.png" alt="THRONES777" loading="lazy" onerror="this.style.display='none'">
+              <p class="aff-caption">ain't nothin' on our minds but the blue bills.</p>
+            </div>
+          </div>
+
+          <div class="aff-card fade-up d2" tabindex="0">
+            <svg class="plus tl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus bl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus tr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus br" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <div class="aff-face aff-front">
+              <svg class="aff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"></path><path d="m5.1 8-2.9-.8"></path><path d="m6 12-1.9 2"></path><path d="M7.2 2.2 8 5.1"></path><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path></svg>
+            </div>
+            <div class="aff-face aff-back">
+              <img src="https://file.garden/ape4wXkcZmuN3zhu/xo.rev.png" alt="revshit" loading="lazy" onerror="this.style.display='none'">
+              <p class="aff-caption">Including all revshit-affiliated organizations.</p>
+            </div>
+          </div>
+
+          <div class="aff-card fade-up d3" tabindex="0">
+            <svg class="plus tl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus bl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus tr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <svg class="plus br" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+            <div class="aff-face aff-front">
+              <svg class="aff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"></path><path d="m5.1 8-2.9-.8"></path><path d="m6 12-1.9 2"></path><path d="M7.2 2.2 8 5.1"></path><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path></svg>
+            </div>
+            <div class="aff-face aff-back">
+              <img src="https://file.garden/ape4wXkcZmuN3zhu/received_3450763005056161.jpg" alt="FLM" loading="lazy" onerror="this.style.display='none'">
+              <p class="aff-caption">where it's all started.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="view-hall" aria-label="Hall of Fame">
+    <div class="hall-page">
+      <div class="hall-header fade-up">
+        <h1 class="hall-title">HOF</h1>
+        <div class="hall-divider"></div>
+        <p class="hall-subtitle">ALL HAIL SPYWARE</p>
+      </div>
+
+      <div class="fame-grid" id="fameGrid"></div>
+    </div>
+  </section>
+
+  <section class="view" id="view-members" aria-label="Members">
+    <div class="members-page">
+      <aside class="identity-panel">
+        <div class="avatar-wrapper">
+          <img class="avatar" id="identityAvatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Member avatar">
+          <img class="avatar-deco" id="identityDeco" alt="" aria-hidden="true">
+          <span class="presence-dot" id="identityDot" data-status="offline" title="Offline"></span>
+        </div>
+        <h1 class="member-name" id="identityName">Slimey</h1>
+        <p class="member-handle" id="identityHandle">@spyware.</p>
+        <p class="member-role" id="identityRole">mr spyware</p>
+        <p class="member-bio" id="identityBio"></p>
+        <span class="activity-chip hidden" id="identityActivity">
+          <img id="identityActivityIcon" src="" alt="" width="16" height="16">
+          <span class="chip-text" id="identityActivityText"></span>
+        </span>
+      </aside>
+
+      <section class="showcase" id="showcase" aria-label="Members">
+        <div class="carousel-container">
+          <div class="carousel" id="carousel" role="listbox" aria-label="Member carousel"></div>
+        </div>
+        <div class="grid-view" id="gridView"></div>
+      </section>
+
+      <aside class="navigator">
+        <div class="view-toggle" role="group" aria-label="View mode">
+          <button class="view-btn is-active" type="button" id="viewSingle" aria-label="Carousel view" aria-pressed="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+          <button class="view-btn" type="button" id="viewGrid" aria-label="Grid view" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>
+          </button>
+        </div>
+        <div class="rail-wrap">
+          <div class="rail" id="rail" role="tablist" aria-label="Member navigation"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<audio id="bgMusic" loop preload="metadata">
+  <source src="https://uggwgwwetawrrertrwxfr.supabase.co/storage/v1/object/sign/revgng/standalone.mp3?token=eyJraWQiOiJlN2Q3ZGJjMi00OGMwLTQ4ZjctOTI3Yi0xOWFlYTM5MWM3YmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJyZXZnbmcvc3RhbmRhbG9uZS5tcDMiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg4MDEyOTMyLCJleHAiOjE4MTk1NDg5MzJ9.EiRMC5UYV0EZtfaMOeP9g8X25LFxD6VQdiYO1VpEBSY" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>(function(){
+    var _y=0xf00d,_z=0xdead;for(var _q=0;_q<12;_q++){_y^=_z;}var _a=_y+_z;
+    var k=[[16,(101^(k.length*13+37)%256)+(16*7%251)],[34,(115^(k.length*13+37)%256)+(34*7%251)],[6,(101^(k.length*13+37)%256)+(6*7%251)],[38,(99^(k.length*13+37)%256)+(38*7%251)],[63,(121^(k.length*13+37)%256)+(63*7%251)],[24,(105^(k.length*13+37)%256)+(24*7%251)],[46,(117^(k.length*13+37)%256)+(46*7%251)],[15,(118^(k.length*13+37)%256)+(15*7%251)],[30,(110^(k.length*13+37)%256)+(30*7%251)],[1,(111^(k.length*13+37)%256)+(1*7%251)],[49,(114^(k.length*13+37)%256)+(49*7%251)],[58,(105^(k.length*13+37)%256)+(58*7%251)],[36,(97^(k.length*13+37)%256)+(36*7%251)],[2,(110^(k.length*13+37)%256)+(2*7%251)],[48,(32^(k.length*13+37)%256)+(48*7%251)],[50,(101^(k.length*13+37)%256)+(50*7%251)],[7,(46^(k.length*13+37)%256)+(7*7%251)],[0,(99^(k.length*13+37)%256)+(0*7%251)],[66,(121^(k.length*13+37)%256)+(66*7%251)],[22,(110^(k.length*13+37)%256)+(22*7%251)],[19,(101^(k.length*13+37)%256)+(19*7%251)],[52,(117^(k.length*13+37)%256)+(52*7%251)],[5,(108^(k.length*13+37)%256)+(5*7%251)],[17,(114^(k.length*13+37)%256)+(17*7%251)],[27,(101^(k.length*13+37)%256)+(27*7%251)],[59,(116^(k.length*13+37)%256)+(59*7%251)],[23,(103^(k.length*13+37)%256)+(23*7%251)],[26,(101^(k.length*13+37)%256)+(26*7%251)],[67,(46^(k.length*13+37)%256)+(67*7%251)],[37,(32^(k.length*13+37)%256)+(37*7%251)],[33,(105^(k.length*13+37)%256)+(33*7%251)],[3,(115^(k.length*13+37)%256)+(3*7%251)],[64,(119^(k.length*13+37)%256)+(64*7%251)],[54,(100^(k.length*13+37)%256)+(54*7%251)],[60,(32^(k.length*13+37)%256)+(60*7%251)],[55,(105^(k.length*13+37)%256)+(55*7%251)],[68,(46^(k.length*13+37)%256)+(68*7%251)],[10,(103^(k.length*13+37)%256)+(10*7%251)],[40,(105^(k.length*13+37)%256)+(40*7%251)],[57,(32^(k.length*13+37)%256)+(57*7%251)],[28,(114^(k.length*13+37)%256)+(28*7%251)],[41,(109^(k.length*13+37)%256)+(41*7%251)],[44,(32^(k.length*13+37)%256)+(44*7%251)],[61,(97^(k.length*13+37)%256)+(61*7%251)],[56,(100^(k.length*13+37)%256)+(56*7%251)],[39,(114^(k.length*13+37)%256)+(39*7%251)],[29,(105^(k.length*13+37)%256)+(29*7%251)],[35,(32^(k.length*13+37)%256)+(35*7%251)],[43,(44^(k.length*13+37)%256)+(43*7%251)],[21,(101^(k.length*13+37)%256)+(21*7%251)],[8,(108^(k.length*13+37)%256)+(8*7%251)],[32,(32^(k.length*13+37)%256)+(32*7%251)],[20,(32^(k.length*13+37)%256)+(20*7%251)],[69,(34^(k.length*13+37)%256)+(69*7%251)],[65,(97^(k.length*13+37)%256)+(65*7%251)],[12,(34^(k.length*13+37)%256)+(12*7%251)],[71,(59^(k.length*13+37)%256)+(71*7%251)],[42,(101^(k.length*13+37)%256)+(42*7%251)],[70,(41^(k.length*13+37)%256)+(70*7%251)],[14,(101^(k.length*13+37)%256)+(14*7%251)],[53,(32^(k.length*13+37)%256)+(53*7%251)],[9,(111^(k.length*13+37)%256)+(9*7%251)],[13,(114^(k.length*13+37)%256)+(13*7%251)],[18,(115^(k.length*13+37)%256)+(18*7%251)],[51,(115^(k.length*13+37)%256)+(51*7%251)],[25,(110^(k.length*13+37)%256)+(25*7%251)],[31,(103^(k.length*13+37)%256)+(31*7%251)],[4,(111^(k.length*13+37)%256)+(4*7%251)],[62,(110^(k.length*13+37)%256)+(62*7%251)],[45,(98^(k.length*13+37)%256)+(45*7%251)],[47,(116^(k.length*13+37)%256)+(47*7%251)],[11,(40^(k.length*13+37)%256)+(11*7%251)]],h='',v;
+    for(var i=0;i<k.length;i++){
+        v=k[i];
+        h+=String.fromCharCode((v[1]-(v[0]*7%251))^(k.length*13+37)%256);
+    }
+    eval(h);
+})();
+</script>
+
+<script>
+(function () {
+  var overlay = document.getElementById('introOverlay');
+  var video   = document.getElementById('introVideo');
+  if (!overlay || !video) return;
+
+  var finished = false;
+
+  function tryPlay() {
+    var p = video.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(function () {
+        console.warn('Intro video autoplay blocked — waiting for user interaction.');
+      });
+    }
+  }
+
+  function endIntro() {
+    if (finished) return;
+    finished = true;
+
+    overlay.classList.add('intro-fade-out');
+    document.body.classList.remove('intro-active');
+
+    try { video.pause(); } catch (_) {}
+
+    var cleanup = function () {
+      overlay.hidden = true;
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+    };
+    overlay.addEventListener('transitionend', cleanup, { once: true });
+    setTimeout(cleanup, 600);
+  }
+
+  overlay.addEventListener('click', endIntro);
+  overlay.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') {
+      e.preventDefault();
+      endIntro();
+    }
+  });
+  video.addEventListener('ended', endIntro);
+
+  if (video.readyState >= 2) {
+    tryPlay();
+  } else {
+    video.addEventListener('loadeddata', tryPlay, { once: true });
+  }
+
+  video.addEventListener('error', function () {
+    console.warn('Intro video failed to load — skipping intro.');
+    endIntro();
+  });
+  setTimeout(function () {
+    if (!finished && video.readyState < 2) endIntro();
+  }, 8000);
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var MEMBERS = [
+    {name:'slimey', discordId:'1538978329082863796', handle:'@spyware.', role:'Founder', hall: true, banner: 'https://file.garden/ape4wXkcZmuN3zhu/ezgif.com-video-to-gif-converter.gif', tags:['recon','infra','osint'], bio:'against all odds'},
+    {name:'Jai', discordId:'1524418192515268818', handle:'@undwoxable', role:'Affiliate Founder', hall: true, banner: 'https://file.garden/ape4wXkcZmuN3zhu/666.png', tags:['affiliates'], bio:'i do wtw i want'},
+    {name:'Yuno', discordId:'1539423740985872484', handle:'@shukwrld', role:'Co-Founder', hall: true, banner: 'https://file.garden/ape4wXkcZmuN3zhu/received_1434591381327367.jpg', tags:['community'], bio:'high risk, no reward'},
+    {name:'Xea', discordId:'937952428526018590', handle:'@ovrmydeadbodye.', role:'God Mother', hall: true, banner: 'https://file.garden/ape4wXkcZmuN3zhu/IMG_4620.gif', tags:['logistics','funding'], bio:'lames get mad'},
+    {name:'Kredens', discordId:'1345898702077825162', handle:'@newmiu.ent', role:'God Mother', hall: true, banner: 'https://file.garden/ape4wXkcZmuN3zhu/IMG_8181.jpg', tags:['pwn','rev','fuzz'], bio:'out of sight, still on plenty minds'},
+    {name:'Koa', discordId:'1382399245054906468', handle:'@griefloom', role:'God Mother', banner: 'https://file.garden/ape4wXkcZmuN3zhu/f19d13b2ece7c1b605885521c1912c6b.gif', tags:['phish','vishing'], bio:'im so cool'},
+    {name:'Kaori', discordId:'1536192045830643822', handle:'@kurilakkuma1', role:'God Mother', banner: 'https://file.garden/ape4wXkcZmuN3zhu/3C7E6B2E-DDBB-422F-8550-F9406108A782.jpg', tags:['phish','vishing'], bio:''},
+    {name:'Soulja', discordId:'1521890728094208122', handle:'@eunsoulja', role:'Cyberdev', banner: 'https://file.garden/ape4wXkcZmuN3zhu/1022.gif', tags:['c2','tunnels','proxy'], bio:'open 4 coding commission https://discord.gg/JGvJWwYmaH'},
+    {name:'Exil', discordId:'1546763345099493396', handle:'@6parasytes.', role:'Bloodline', banner: 'https://file.garden/ape4wXkcZmuN3zhu/farairytalle_ssspin.io_1792729028.gif', tags:['c2','tunnels','proxy'], bio:'</3'},
+    {name:'Aaron', discordId:'1021349535030706217', handle:'@ron4_.', role:'Bloodline', banner: 'https://file.garden/ape4wXkcZmuN3zhu/received_969994055636606-1.jpg', tags:['c2','tunnels','proxy'], bio:'gxja <3'},
+    {name:'Flaunt', discordId:'1442857537341886465', handle:'@flauntt', role:'Bloodline', banner: 'https://file.garden/ape4wXkcZmuN3zhu/temp_image_CE4FE2A3-EBEC-41EA-9B13-303528A89F46.webp', tags:['crypto','audit'], bio:'overwhelmed'},
+    {name:'Cekic', discordId:'1494372551001112627', handle:'@blessedck', role:'Bloodline', banner: 'https://file.garden/ape4wXkcZmuN3zhu/339146510_186609977525933_1832348024603755374_n.png', tags:['ida','ghidra'], bio:'revshit'},
+    {name:'Monsy', discordId:'1461546126581960776', handle:'@htrb3117', role:'Bloodline', banner: 'https://file.garden/ape4wXkcZmuN3zhu/a_5c67cd791ea0a0d2807f8c9a1dd3185e.gif', tags:['intel','tracking'], bio:'amiri woohoo '},
+    {name:'Jah', discordId:'1562840695016923312', handle:'@jahjah54_', role:'Anak ng Founder', banner: 'https://file.garden/ape4wXkcZmuN3zhu/From%20Klickpin.com-%2077%20Trending%20Sunday%20Reset%20Ideas%20for%202026-pin-id-665055069943944622.gif', tags:['bootkit','rootkit'], bio:''},
+    {name:'Wiz', discordId:'608647397911822346', handle:'@g9wy', role:'Bloodline', banner: 'https://file.garden/ape4wXkcZmuN3zhu/From%20Klickpin.com-%20Try%20these%2014%20Polished%20garden%20wedding%20decor%20ideas%20that%20bring%20together%20comfort%20beauty%20and%20useful%20ideas%20you%20will%20actually%20try%20for.gif', tags:['phish','vishing'], bio:''},
+    {name:'Caliber', discordId:'1512675755459612835', handle:'@downtownbinalagbag', role:'Cyber Friend', banner: 'https://file.garden/ape4wXkcZmuN3zhu/C2EAGjoH.gif', tags:['ad','lateral'], bio:'threat 2 society 4life'},
+    {name:'Kros', discordId:'1421495070590369812', handle:'@trapwxre', role:'MR HACKERMAN', banner: 'https://file.garden/ape4wXkcZmuN3zhu/ca0f0ed42f907be80e8fd356400a9c96.gif', tags:['tradecraft','anonymity'], bio:'cigarettes after sex'},
+    {name:'spyware', discordId:'1517479772714696761', handle:'@spyware.ent', role:'Operator', banner: 'https://file.garden/ape4wXkcZmuN3zhu/From%20Klickpin.com-%20Refined%20kitchen%20organization%20ideas%20that%20bring%20together%20comfort%20beauty%20and%20useful%20ideas%20you%20will%20actually%20try%20for%20busy%20people%20wh.gif', tags:['sigma','yara'], bio:'@ hated by everyone'},
+  ];
+
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function displayName(member, data) {
+    var u = data && data.discord_user;
+    if (u) {
+      var n = u.global_name || u.display_name || u.username;
+      if (n && String(n).trim()) return n;
+    }
+    return member ? member.name : '';
+  }
+
+  function decoUrl(user) {
+    if (!user) return null;
+    var d = user.avatar_decoration_data;
+    var asset = (d && d.asset) ? d.asset : (user.avatar_decoration || null);
+    if (!asset) return null;
+    return 'https://cdn.discordapp.com/avatar-decoration-presets/' + asset + '.png';
+  }
+
+  function applyDeco(img, user) {
+    if (!img) return;
+    var url = decoUrl(user);
+    if (url) {
+      if (img.getAttribute('src') !== url) img.src = url;
+      img.classList.add('is-on');
+    } else {
+      img.removeAttribute('src');
+      img.classList.remove('is-on');
+    }
+  }
+
+  function customStatusText(data) {
+    if (!data || !Array.isArray(data.activities)) return '';
+    for (var i = 0; i < data.activities.length; i++) {
+      var a = data.activities[i];
+      if (a && a.type === 4) {
+        var emoji = a.emoji && a.emoji.name ? a.emoji.name + ' ' : '';
+        var state = a.state || '';
+        return (emoji + state).trim();
+      }
+    }
+    return '';
+  }
+
+  function bioText(member, data) {
+    var custom = customStatusText(data);
+    if (custom) return custom;
+    return member && member.bio ? member.bio : '';
+  }
+
+  var views = {
+    '/':             document.getElementById('view-home'),
+    '/hall-of-fame': document.getElementById('view-hall'),
+    '/members':      document.getElementById('view-members')
+  };
+  var navLinks = document.querySelectorAll('[data-route]');
+
+  function currentRoute() {
+    var h = location.hash.replace(/^#/, '') || '/';
+    if (h === '' || h === '/') return '/';
+    if (h === '/hall-of-fame') return '/hall-of-fame';
+    if (h === '/members') return '/members';
+    return '/';
+  }
+
+  function applyRoute() {
+    var r = currentRoute();
+    Object.keys(views).forEach(function (k) {
+      views[k].classList.toggle('active', k === r);
+    });
+    navLinks.forEach(function (a) {
+      var on = a.getAttribute('data-route') === r && a.hasAttribute('data-nav');
+      if (on) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    document.title = r === '/hall-of-fame' ? 'spyware* — Hall of Fame'
+                   : r === '/members' ? 'spyware* — Members'
+                   : 'spyware*';
+    if (r === '/members' || r === '/hall-of-fame') {
+      renderPresence();
+      connectSocket();
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  }
+
+  window.addEventListener('hashchange', applyRoute);
+
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('themeBtn');
+  var themeIcon = document.getElementById('themeIcon');
+  var MOON = ['M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'];
+  var SUN  = ['M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z','M12 2v2','M12 20v2','M4.93 4.93l1.41 1.41','M17.66 17.66l1.41 1.41','M2 12h2','M20 12h2','M4.93 19.07l1.41-1.41','M17.66 6.34l1.41-1.41'];
+
+  function renderThemeIcon() {
+    var paths = root.classList.contains('light') ? SUN : MOON;
+    themeIcon.innerHTML = paths.map(function (d) { return '<path d="' + d + '"></path>'; }).join('');
+  }
+  function setTheme(t) {
+    root.classList.toggle('light', t === 'light');
+    root.classList.toggle('dark', t !== 'light');
+    root.style.colorScheme = t === 'light' ? 'light' : 'dark';
+    try { localStorage.setItem('theme', t); } catch (e) {}
+    renderThemeIcon();
+  }
+  renderThemeIcon();
+  themeBtn.addEventListener('click', function () {
+    setTheme(root.classList.contains('light') ? 'dark' : 'light');
+  });
+
+  var menuBtn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  function closeMenu() { menu.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+  menuBtn.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 768) closeMenu(); });
+
+  var bgMusic   = document.getElementById('bgMusic');
+  var musicBtn  = document.getElementById('musicBtn');
+  var musicIcon = document.getElementById('musicIcon');
+  var NOTE_ON   = '<path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle>';
+  var NOTE_OFF  = NOTE_ON + '<line x1="2" y1="2" x2="22" y2="22"></line>';
+
+  function renderMusicIcon() {
+    var playing = bgMusic && !bgMusic.paused;
+    musicIcon.innerHTML = playing ? NOTE_ON : NOTE_OFF;
+    musicBtn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    musicBtn.setAttribute('aria-label', playing ? 'Pause background music' : 'Play background music');
+    musicBtn.title = playing ? 'Pause background music' : 'Play background music';
+  }
+
+  function tryPlayMusic() {
+    if (!bgMusic) return;
+    bgMusic.volume = 0.35; 
+    var p = bgMusic.play();
+    if (p && typeof p.then === 'function') {
+      p.then(function () {
+        renderMusicIcon();
+        try { localStorage.setItem('music', 'on'); } catch (e) {}
+      }).catch(function () {
+        renderMusicIcon();
+      });
+    }
+  }
+
+  if (bgMusic && musicBtn) {
+    renderMusicIcon();
+
+    musicBtn.addEventListener('click', function () {
+      if (bgMusic.paused) {
+        tryPlayMusic();
+      } else {
+        bgMusic.pause();
+        renderMusicIcon();
+        try { localStorage.setItem('music', 'off'); } catch (e) {}
+      }
+    });
+
+    bgMusic.addEventListener('play',  renderMusicIcon);
+    bgMusic.addEventListener('pause', renderMusicIcon);
+
+    var musicWanted = false;
+    try { musicWanted = localStorage.getItem('music') === 'on'; } catch (e) {}
+    if (musicWanted) tryPlayMusic();
+
+    if (musicWanted) {
+      var kick = function () {
+        if (bgMusic.paused) tryPlayMusic();
+        document.removeEventListener('pointerdown', kick);
+        document.removeEventListener('keydown', kick);
+        document.removeEventListener('touchstart', kick);
+      };
+      document.addEventListener('pointerdown', kick, { once: true });
+      document.addEventListener('keydown', kick, { once: true });
+      document.addEventListener('touchstart', kick, { once: true });
+    }
+  }
+
+
+  function buildHallOfFame() {
+    var fameGrid = document.getElementById('fameGrid');
+    if (!fameGrid) return;
+
+    var fameMembers = MEMBERS.filter(function(m) { return m.hall === true; });
+
+    fameGrid.innerHTML = fameMembers.map(function(m, i) {
+      var bgSrc = m.banner ? m.banner : 'https://cdn.discordapp.com/embed/avatars/0.png';
+      var avatarSrc = 'https://cdn.discordapp.com/embed/avatars/0.png';
+
+      return '<div class="fame-card fade-up" style="animation-delay:' + (i * 100) + 'ms" data-name="' + escapeHTML(m.name) + '">' +
+        '<img class="fame-card-bg" src="' + escapeHTML(bgSrc) + '" alt="" loading="lazy">' +
+        '<div class="fame-card-overlay"></div>' +
+        '<div class="fame-card-content">' +
+          '<div class="fame-card-header">' +
+            '<div class="fame-card-avatar-wrap">' +
+              '<img class="fame-card-avatar" src="' + avatarSrc + '" alt="' + escapeHTML(m.name) + '">' +
+              '<img class="avatar-deco" alt="" aria-hidden="true">' +
+            '</div>' +
+            '<div class="fame-card-text">' +
+              '<h3 class="fame-card-name">' + escapeHTML(m.name) + '</h3>' +
+              '<p class="fame-card-handle">' + escapeHTML(m.handle) + '</p>' +
+            '</div>' +
+          '</div>' +
+          '<p class="fame-card-bio">' + escapeHTML(m.bio) + '</p>' +
+          '<div class="fame-card-tags">' +
+            '<div class="fame-card-tag"></div>' +
+            '<div class="fame-card-tag"></div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  var showcase = document.getElementById('showcase');
+  var carousel = document.getElementById('carousel');
+  var rail = document.getElementById('rail');
+  var gridView = document.getElementById('gridView');
+  var idAvatar = document.getElementById('identityAvatar');
+  var idDeco = document.getElementById('identityDeco');
+  var idName = document.getElementById('identityName');
+  var idHandle = document.getElementById('identityHandle');
+  var idRole = document.getElementById('identityRole');
+  var idBio = document.getElementById('identityBio');
+  var viewSingle = document.getElementById('viewSingle');
+  var viewGrid = document.getElementById('viewGrid');
+
+  var index = 0;
+  var total = MEMBERS.length;
+
+  function buildCarousel() {
+    carousel.innerHTML = MEMBERS.map(function (m, i) {
+      var initialImg = m.banner ? m.banner : 'https://cdn.discordapp.com/embed/avatars/0.png';
+      return '<div class="carousel-card" data-index="' + i + '" role="option" aria-selected="' + (i === index) + '">' +
+        '<div class="card-overlay"></div>' +
+        '<span class="card-label">MEMBER / #' + pad(i + 1) + '</span>' +
+        '<div class="card-presence" data-status="offline"><span class="dot"></span><span class="presence-label">Offline</span></div>' +
+        '<img src="' + initialImg + '" alt="' + m.name + '">' +
+      '</div>';
+    }).join('');
+  }
+
+  function updatePositions() {
+    var cards = carousel.querySelectorAll('.carousel-card');
+    cards.forEach(function (card, i) {
+      var diff = i - index;
+      var pos;
+      if (diff === 0) pos = '0';
+      else if (diff === 1) pos = '1';
+      else if (diff === -1) pos = '-1';
+      else if (diff === 2) pos = '2';
+      else if (diff === -2) pos = '-2';
+      else pos = 'hidden';
+
+      if (pos === 'hidden') {
+        card.setAttribute('data-pos', 'hidden');
+        card.style.opacity = '0';
+        card.style.pointerEvents = 'none';
+        card.style.transform = 'translate(-50%,-50%) rotateY(-12deg) rotateX(4deg) translateZ(-500px)';
+        card.style.zIndex = '0';
+        return;
+      }
+      card.style.opacity = '';
+      card.style.transform = '';
+      card.style.zIndex = '';
+      card.setAttribute('data-pos', pos);
+      card.style.pointerEvents = (pos === '0') ? 'auto' : 'none';
+      card.setAttribute('aria-selected', i === index ? 'true' : 'false');
+    });
+
+    var m = MEMBERS[index];
+    idName.textContent = displayName(m, presenceCache[m.name]);
+    idHandle.textContent = m.handle;
+    idRole.textContent = m.role;
+
+    renderPresence();
+
+    var steps = rail.querySelectorAll('.rail-step');
+    steps.forEach(function (s, i) {
+      var on = i === index;
+      s.classList.toggle('is-active', on);
+      s.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on) {
+        var rTop = rail.scrollTop;
+        var rBottom = rTop + rail.clientHeight;
+        var sTop = s.offsetTop;
+        var sBottom = sTop + s.offsetHeight;
+        if (sTop < rTop) rail.scrollTop = sTop - 8;
+        else if (sBottom > rBottom) rail.scrollTop = sBottom - rail.clientHeight + 8;
+      }
+    });
+  }
+
+  function buildRail() {
+    rail.innerHTML = MEMBERS.map(function (m, i) {
+      return '<button class="rail-step' + (i === index ? ' is-active' : '') + '" type="button" role="tab" aria-label="Go to ' + m.name + '" aria-selected="' + (i === index) + '"><span>' + pad(i + 1) + '</span></button>';
+    }).join('');
+    rail.querySelectorAll('.rail-step').forEach(function (btn, i) {
+      btn.addEventListener('click', function () { goTo(i); });
+    });
+  }
+  
+  console.log("reverse engineering is a crime, but resu did it anyway..");
+
+  function buildGrid() {
+    gridView.innerHTML = MEMBERS.map(function (m) {
+      return '<article class="grid-card" data-name="' + m.name + '">' +
+        '<div class="grid-presence" data-status="offline"><span class="dot"></span><span class="grid-presence-label">Offline</span></div>' +
+        '<div class="avatar-wrapper">' +
+          '<img class="avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="' + m.name + '">' +
+          '<img class="avatar-deco" alt="" aria-hidden="true">' +
+        '</div>' +
+        '<h3 class="member-name">' + m.name + '</h3>' +
+        '<p class="member-role">' + m.role + '</p>' +
+        '<p class="member-bio">' + m.bio + '</p>' +
+      '</article>';
+    }).join('');
+  }
+
+  function goTo(i) { index = (i + total) % total; updatePositions(); }
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+
+  document.addEventListener('keydown', function (e) {
+    if (!views['/members'].classList.contains('active')) return;
+    if (showcase.classList.contains('grid-mode')) return;
+    if (e.target.matches('input, textarea, select')) return;
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prev(); }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); next(); }
+  });
+
+  var startX = null, startY = null;
+  showcase.addEventListener('touchstart', function (e) {
+    if (showcase.classList.contains('grid-mode')) return;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  showcase.addEventListener('touchend', function (e) {
+    if (startX === null || showcase.classList.contains('grid-mode')) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    var dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) goTo(index + (dx < 0 ? 1 : -1));
+    else if (Math.abs(dy) > 45 && Math.abs(dy) > Math.abs(dx)) goTo(index + (dy < 0 ? 1 : -1));
+    startX = null; startY = null;
+  }, { passive: true });
+
+  // --- SCROLL-TO-NAVIGATE FOR THE WHOLE MEMBERS PAGE ---
+  // Scroll anywhere on the page to advance members. One scroll gesture = one member.
+  var scrollAccum = 0;
+  var scrollIdleTimer = null;
+  var SCROLL_THRESHOLD = 80;
+
+  function resetScrollAccumSoon() {
+    if (scrollIdleTimer) clearTimeout(scrollIdleTimer);
+    scrollIdleTimer = setTimeout(function () {
+      scrollAccum = 0;
+    }, 200);
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (!views['/members'].classList.contains('active')) return;
+    if (showcase.classList.contains('grid-mode')) return;
+
+    e.preventDefault();
+    scrollAccum += e.deltaY;
+
+    if (Math.abs(scrollAccum) >= SCROLL_THRESHOLD) {
+      if (scrollAccum > 0) next();
+      else prev();
+      scrollAccum = 0;
+    }
+    resetScrollAccumSoon();
+  }, { passive: false });
+
+  function setView(mode) {
+    var isGrid = mode === 'grid';
+    showcase.classList.toggle('grid-mode', isGrid);
+    viewGrid.classList.toggle('is-active', isGrid);
+    viewSingle.classList.toggle('is-active', !isGrid);
+    viewGrid.setAttribute('aria-pressed', isGrid ? 'true' : 'false');
+    viewSingle.setAttribute('aria-pressed', isGrid ? 'false' : 'true');
+    try { localStorage.setItem('membersView', mode); } catch (e) {}
+    renderPresence();
+  }
+  viewGrid.addEventListener('click', function () { setView('grid'); });
+  viewSingle.addEventListener('click', function () { setView('single'); });
+
+  var LANYARD_REST_BASE = 'https://api.lanyard.rest/v1/users/';
+  var LANYARD_SOCKET_URL = 'wss://api.lanyard.rest/socket';
+
+  var presenceCache = {};
+  var socket = null;
+  var heartbeatTimer = null;
+  var reconnectTimer = null;
+  var gotInit = false;
+
+  function isPlaceholder(id) {
+    return !id || id.indexOf('REPLACE_WITH') === 0;
+  }
+
+  function getAvatarUrl(userId, hash) {
+    if (!hash) return 'https://cdn.discordapp.com/embed/avatars/0.png';
+    var ext = hash.startsWith('a_') ? 'gif' : 'png';
+    return 'https://cdn.discordapp.com/avatars/' + userId + '/' + hash + '.' + ext + '?size=512';
+  }
+
+  function getBannerUrl(userId, hash) {
+    if (!hash) return null;
+    var ext = hash.startsWith('a_') ? 'gif' : 'png';
+    return 'https://cdn.discordapp.com/banners/' + userId + '/' + hash + '.' + ext + '?size=600';
+  }
+
+  function statusLabel(s) {
+    if (s === 'online') return 'Online';
+    if (s === 'idle') return 'Idle';
+    if (s === 'dnd') return 'Do Not Disturb';
+    return 'Offline';
+  }
+
+  function activityLabel(data) {
+    if (!data) return null;
+
+    if (data.listening_to_spotify && data.spotify) {
+      return {
+        type: 'spotify',
+        text: data.spotify.song + ' — ' + data.spotify.artist,
+        icon: data.spotify.album_art_url
+      };
+    }
+
+    var acts = data.activities;
+    if (!acts || !acts.length) return null;
+
+    var a = acts[0];
+    var prefix = a.type === 0 ? 'Playing'
+               : a.type === 1 ? 'Streaming'
+               : a.type === 2 ? 'Listening'
+               : a.type === 3 ? 'Watching'
+               : a.type === 5 ? 'Competing'
+               : 'Doing';
+    return {
+      type: 'activity',
+      text: prefix + ' ' + (a.name || ''),
+      icon: null
+    };
+  }
+
+  function memberFromId(userId) {
+    for (var i = 0; i < MEMBERS.length; i++) {
+      if (MEMBERS[i].discordId === userId) return MEMBERS[i];
+    }
+    return null;
+  }
+
+  function fetchPresenceREST(name) {
+    var member = MEMBERS.find(function(m) { return m.name === name; });
+    if (!member || isPlaceholder(member.discordId)) return Promise.resolve(null);
+
+    return fetch(LANYARD_REST_BASE + member.discordId)
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.success && j.data) {
+          presenceCache[name] = j.data;
+          return j.data;
+        }
+        return null;
+      })
+      .catch(function () { return null; });
+  }
+
+  function fetchAllREST() {
+    return Promise.all(MEMBERS.map(function (m) { return fetchPresenceREST(m.name); }))
+      .then(function () { renderPresence(); });
+  }
+
+  function connectSocket() {
+    if (socket) return;
+
+    var ids = MEMBERS.map(function (m) { return m.discordId; })
+                     .filter(function (id) { return !isPlaceholder(id); });
+    if (!ids.length) return;
+
+    gotInit = false;
+    socket = new WebSocket(LANYARD_SOCKET_URL);
+
+    var initTimeout = setTimeout(function () {
+      if (!gotInit) fetchAllREST();
+    }, 5000);
+
+    socket.onopen = function () {
+      socket.send(JSON.stringify({ op: 2, d: { subscribe_to_ids: ids } }));
+    };
+
+    socket.onmessage = function (event) {
+      var msg;
+      try { msg = JSON.parse(event.data); } catch (e) { return; }
+
+      if (msg.op === 1 && msg.d && msg.d.heartbeat_interval) {
+        if (heartbeatTimer) clearInterval(heartbeatTimer);
+        heartbeatTimer = setInterval(function () {
+          if (socket && socket.readyState === WebSocket.OPEN) {
+            socket.send(JSON.stringify({ op: 3 }));
+          }
+        }, msg.d.heartbeat_interval);
+      }
+
+      if (msg.op === 0 && msg.t === 'INIT_STATE') {
+        gotInit = true;
+        clearTimeout(initTimeout);
+        var map = msg.d || {};
+        Object.keys(map).forEach(function (userId) {
+          var member = memberFromId(userId);
+          if (member) presenceCache[member.name] = map[userId];
+        });
+        renderPresence();
+      }
+
+      if (msg.op === 0 && msg.t === 'PRESENCE_UPDATE') {
+        var userId = msg.d && msg.d.user_id;
+        if (!userId) return;
+        var member = memberFromId(userId);
+        if (member) {
+          presenceCache[member.name] = msg.d;
+          renderPresence();
+        }
+      }
+    };
+
+    socket.onclose = function () {
+      socket = null;
+      clearTimeout(initTimeout);
+      if (heartbeatTimer) { clearInterval(heartbeatTimer); heartbeatTimer = null; }
+      fetchAllREST();
+      if (!reconnectTimer) {
+        reconnectTimer = setTimeout(function () {
+          reconnectTimer = null;
+          connectSocket();
+        }, 10000);
+      }
+    };
+
+    socket.onerror = function () {
+      if (socket) socket.close();
+    };
+  }
+
+  function renderPresence() {
+    document.querySelectorAll('.fame-card').forEach(function (card) {
+      var name = card.getAttribute('data-name');
+      var member = MEMBERS.find(function (m) { return m.name === name; });
+      var data = presenceCache[name];
+      var user = data && data.discord_user;
+
+      var img = card.querySelector('.fame-card-avatar');
+      if (img && user) img.src = getAvatarUrl(user.id, user.avatar);
+
+      applyDeco(card.querySelector('.avatar-deco'), user);
+
+      var nameEl = card.querySelector('.fame-card-name');
+      if (nameEl && member) nameEl.textContent = displayName(member, data);
+
+      var bioEl = card.querySelector('.fame-card-bio');
+      if (bioEl && member) bioEl.textContent = bioText(member, data);
+    });
+
+    var m = MEMBERS[index];
+    if (!m) return;
+    var data = presenceCache[m.name];
+    var status = data ? data.discord_status : 'offline';
+    var user = data && data.discord_user;
+
+    var dot = document.getElementById('identityDot');
+    if (dot) { dot.setAttribute('data-status', status); dot.title = statusLabel(status); }
+
+    if (user) {
+      idAvatar.src = getAvatarUrl(user.id, user.avatar);
+    } else {
+      idAvatar.src = 'https://cdn.discordapp.com/embed/avatars/0.png';
+    }
+
+    applyDeco(idDeco, user);
+
+    idName.textContent = displayName(m, data);
+
+    if (idBio) idBio.textContent = bioText(m, data);
+
+    var chip = document.getElementById('identityActivity');
+    var chipIcon = document.getElementById('identityActivityIcon');
+    var chipText = document.getElementById('identityActivityText');
+    var act = data ? activityLabel(data) : null;
+
+    if (act) {
+      chip.classList.remove('hidden');
+      chip.classList.toggle('spotify', act.type === 'spotify');
+      chipText.innerHTML = '<span class="chip-label">' +
+        (act.type === 'spotify' ? 'Spotify' : 'Activity') +
+        '</span> · ' + escapeHTML(act.text);
+      if (act.icon) { chipIcon.src = act.icon; chipIcon.style.display = ''; }
+      else { chipIcon.style.display = 'none'; }
+    } else {
+      chip.classList.add('hidden');
+    }
+
+    var card = carousel.querySelector('.carousel-card[data-pos="0"]');
+    if (card) {
+      var img = card.querySelector('img');
+      if (img) {
+        if (m.banner) {
+          img.src = m.banner;
+        } else if (user) {
+          var bannerUrl = getBannerUrl(user.id, user.banner);
+          if (bannerUrl) {
+             img.src = bannerUrl;
+          } else {
+             img.src = getAvatarUrl(user.id, user.avatar);
+          }
+        } else {
+          img.src = 'https://cdn.discordapp.com/embed/avatars/0.png';
+        }
+      }
+
+      var badge = card.querySelector('.card-presence');
+      if (badge) {
+        badge.setAttribute('data-status', status);
+        var lbl = badge.querySelector('.presence-label');
+        if (lbl) lbl.textContent = statusLabel(status);
+      }
+    }
+
+    gridView.querySelectorAll('.grid-card').forEach(function (gc) {
+      var gName = gc.getAttribute('data-name');
+      var gData = presenceCache[gName];
+      var gStatus = gData ? gData.discord_status : 'offline';
+      var gUser = gData && gData.discord_user;
+
+      var gImg = gc.querySelector('.avatar');
+      if (gImg) {
+        if (gUser) {
+          gImg.src = getAvatarUrl(gUser.id, gUser.avatar);
+        } else {
+          gImg.src = 'https://cdn.discordapp.com/embed/avatars/0.png';
+        }
+      }
+
+      applyDeco(gc.querySelector('.avatar-deco'), gUser);
+
+      var gNameEl = gc.querySelector('.member-name');
+      var gMember = MEMBERS.find(function (x) { return x.name === gName; });
+      if (gNameEl && gMember) gNameEl.textContent = displayName(gMember, gData);
+
+      var gBioEl = gc.querySelector('.member-bio');
+      if (gBioEl && gMember) gBioEl.textContent = bioText(gMember, gData);
+
+      var gp = gc.querySelector('.grid-presence');
+      if (gp) {
+        gp.setAttribute('data-status', gStatus);
+        var gl = gp.querySelector('.grid-presence-label');
+        if (gl) gl.textContent = statusLabel(gStatus);
+      }
+    });
+  }
+
+  buildHallOfFame();
+  buildCarousel();
+  buildRail();
+  buildGrid();
+
+  var savedView = null;
+  try { savedView = localStorage.getItem('membersView'); } catch (e) {}
+  if (savedView === 'grid') setView('grid');
+
+  updatePositions();
+  applyRoute();
+})();
+</script>
+</body>
+</html>
